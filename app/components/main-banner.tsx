@@ -1,6 +1,10 @@
+import { Container } from "@/components/custom/container";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 type Props = {
-  title: {};
-  subtitle: string;
+  title: string;
+  subtitle?: string;
   buttons?: {
     primary?: {
       label: string;
@@ -15,13 +19,30 @@ type Props = {
 
 const MainBanner = ({ title, subtitle, buttons }: Props) => {
   return (
-    <header className="flex justify-center py-0">
-      <div className="text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </h2>
+    <Container className="flex justify-center py-24" as="header">
+      <div className="flex flex-col gap-6 text-center lg:max-w-[650px]">
+        <h1 className="text-3xl font-bold tracking-tight lg:text-5xl">
+          {title}
+        </h1>
+        {subtitle && <p className="text-lg text-gray-600">{subtitle}</p>}
+        {buttons && (
+          <footer className="flex justify-center gap-6">
+            {buttons.primary && (
+              <Button asChild>
+                <Link href={buttons.primary.href}>{buttons.primary.label}</Link>
+              </Button>
+            )}
+            {buttons.secondary && (
+              <Button variant="secondary" asChild>
+                <Link href={buttons.secondary.href}>
+                  {buttons.secondary.label}
+                </Link>
+              </Button>
+            )}
+          </footer>
+        )}
       </div>
-    </header>
+    </Container>
   );
 };
 
