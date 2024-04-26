@@ -8,8 +8,10 @@ import {
 
 const Nav = () => {
   return (
-    <NavigationMenu className="p-6 max-w-screen flex justify-between">
-      <h1 className="leading-7 font-bold text-lg">Freelancer Personal Site</h1>
+    <NavigationMenu className="max-w-screen fixed flex w-screen justify-between border-b border-gray-200 bg-white  p-6">
+      <span className="text-lg font-bold leading-7">
+        Freelancer Personal Site
+      </span>
       <NavigationMenuList className="gap-x-6">
         <NavigationMenuItem>
           <NavigationMenuLink href="/link-1">Link 1</NavigationMenuLink>

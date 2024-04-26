@@ -1,5 +1,5 @@
-import { Footer } from "@/components/sections/footer";
-import { Nav } from "@/components/sections/nav";
+import { Footer } from "@/app/components/footer";
+import { Nav } from "@/app/components/nav";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -19,7 +19,7 @@ const RootLayout = ({
     <html lang="en">
       <body className={inter.className}>
         <Nav />
-        {children}
+        <main className="py-24">{children}</main>
         <Footer />
       </body>
     </html>
