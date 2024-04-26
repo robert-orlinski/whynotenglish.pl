@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-
+import { Nav } from "@/components/sections/nav";
+import { Footer } from "@/components/sections/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -29,33 +18,9 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavigationMenu className="p-6 max-w-screen flex justify-between">
-          <h1 className="leading-7 font-bold text-lg">
-            Freelancer Personal Site
-          </h1>
-          <NavigationMenuList className="gap-x-6">
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/link-1">Link 1</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/link-2">Link 2</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/link-3">Link 3</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/link-4">Link 4</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Button asChild>
-                <NavigationMenuLink href="/featured-link">
-                  Featured link
-                </NavigationMenuLink>
-              </Button>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
