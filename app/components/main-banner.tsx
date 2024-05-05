@@ -21,10 +21,12 @@ const MainBanner = ({ title, subtitle, buttons }: Props) => {
   return (
     <Container className="flex justify-center py-24" as="header">
       <div className="flex flex-col gap-6 text-center lg:max-w-[650px]">
-        <h1 className="text-3xl font-bold tracking-tight lg:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight lg:text-6xl">
           {title}
         </h1>
-        {subtitle && <p className="text-lg text-gray-600">{subtitle}</p>}
+        {subtitle && (
+          <p className="mx-auto w-8/12 text-2xl text-gray-600">{subtitle}</p>
+        )}
         {buttons && (
           <footer className="flex justify-center gap-6">
             {buttons.primary && (
