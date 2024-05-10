@@ -2,7 +2,7 @@ import { Container } from "@/components/custom/container";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-type Props = {
+interface Props {
   title: string;
   subtitle?: string;
   buttons?: {
@@ -15,7 +15,7 @@ type Props = {
       href: string;
     };
   };
-};
+}
 
 const MainBanner = ({ title, subtitle, buttons }: Props) => {
   return (
