@@ -1,4 +1,5 @@
 import { Container } from "@/components/custom/container";
+import { H1, P } from "@/components/custom/typography";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -20,15 +21,15 @@ interface Props {
 const MainBanner = ({ title, subtitle, buttons }: Props) => {
   return (
     <Container className="flex justify-center py-24" as="header">
-      <div className="flex flex-col gap-6 text-center lg:max-w-[650px]">
-        <h1 className="text-3xl font-bold tracking-tight lg:text-6xl">
-          {title}
-        </h1>
+      <div className="flex flex-col gap-6 md:items-center md:text-center lg:max-w-[650px]">
+        <H1>{title}</H1>
         {subtitle && (
-          <p className="mx-auto w-8/12 text-2xl text-gray-600">{subtitle}</p>
+          <P className="md:w-8/12" size="xl">
+            {subtitle}
+          </P>
         )}
         {buttons && (
-          <footer className="flex justify-center gap-6">
+          <footer className="flex gap-6">
             {buttons.primary && (
               <Button asChild>
                 <Link href={buttons.primary.href}>{buttons.primary.label}</Link>
