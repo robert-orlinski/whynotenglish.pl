@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
-import { HTMLAttributes } from "react";
+import { ElementType, HTMLAttributes } from "react";
 
 const H1 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => {
   return (
@@ -38,7 +38,7 @@ const H3 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => {
   );
 };
 
-const paragraphVariants = cva("text-primary/70", {
+const textVariants = cva("text-primary/75", {
   variants: {
     size: {
       lg: "text-xl lg:text-2xl",
@@ -50,14 +50,21 @@ const paragraphVariants = cva("text-primary/70", {
   },
 });
 
-interface ParagraphProps
+interface TextProps
   extends HTMLAttributes<HTMLParagraphElement>,
-    VariantProps<typeof paragraphVariants> {}
+    VariantProps<typeof textVariants> {
+  as?: ElementType;
+}
 
-const P = ({ size, className, ...props }: ParagraphProps) => {
+const Text = ({
+  size,
+  className,
+  as: Component = "p",
+  ...props
+}: TextProps) => {
   return (
-    <p className={cn(paragraphVariants({ size, className }))} {...props} />
+    <Component className={cn(textVariants({ size, className }))} {...props} />
   );
 };
 
-export { H1, H2, H3, P };
+export { H1, H2, H3, Text };

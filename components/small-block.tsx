@@ -1,6 +1,6 @@
 import { ImageBase } from "@/types/image-base";
 import Image from "next/image";
-import { H3, P } from "./typography";
+import { H3, Text } from "./typography";
 
 interface Props {
   image: ImageBase;
@@ -22,7 +22,7 @@ const SmallBlock = ({ image, title, description }: Props) => {
       </div>
       <div className="space-y-4">
         <H3>{title}</H3>
-        <P size="lg">{description}</P>
+        <Text size="lg">{description}</Text>
       </div>
     </div>
   );
