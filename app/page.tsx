@@ -10,18 +10,17 @@ export default function Home() {
     <>
       <Container className="my-24 flex justify-center" as="header">
         <div className="flex flex-col gap-6 md:items-center md:text-center lg:max-w-[650px]">
-          <H1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</H1>
+          <H1>Jedyna szkoła języka angielskiego, jakiej potrzebujesz!</H1>
           <P className="md:w-8/12" size="lg">
-            Etiam auctor odio nec aliquam varius. Aenean accumsan non arcu et
-            posuere. In ultricies tincidunt eros, sit amet viverra diam
-            fermentum at.
+            Dam Ci wartościową wiedzę i pokażę jak się uczyć - wszystko to w
+            sympatycznej atmosferze!
           </P>
           <footer className="flex gap-6">
             <Button asChild>
-              <Link href="/">Button 1</Link>
+              <Link href="/cennik">Cennik</Link>
             </Button>
             <Button variant="secondary" asChild>
-              <Link href="/">Button 2</Link>
+              <Link href="/zapisz-sie">Zapisz się!</Link>
             </Button>
           </footer>
         </div>
@@ -31,15 +30,14 @@ export default function Home() {
         className="flex flex-col gap-10 lg:flex-row lg:items-center"
       >
         <article className="lg:basis-1/2">
-          <H2>Lorem ipsum dolor sit</H2>
+          <H2>Cześć! Jestem Julia!</H2>
           <P className="mt-4" size="lg">
-            Amet, consectetur adipiscing elit. Etiam auctor odio nec aliquam
-            varius.
+            W mojej szkole językowej przede wszystkim patrzę na Ciebie.
           </P>
         </article>
         <figure className="relative h-[80vw] w-full lg:h-[40vw] lg:basis-1/2">
           <Image
-            src="/images/woman.jpg"
+            src="/images/julia.jpg"
             alt="Woman in a forest"
             fill
             className="rounded-2xl object-cover object-center"
@@ -53,24 +51,24 @@ export default function Home() {
             src: "/images/brain.jpg",
             alt: "",
           }}
-          title="Lorem ipsum dolor sit amet"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          title="Chcę poznać Twój cel"
+          description="Patrzę na to, czego konkretnie potrzebujesz w danym momencie oraz długoterminowo"
         />
         <SmallBlock
           image={{
             src: "/images/brain.jpg",
             alt: "",
           }}
-          title="Lorem ipsum dolor sit amet"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          title="Dostosowuję się do Ciebie"
+          description="Widzę w jaki sposób się uczysz i Ci z tym pomagam podczas zajęć, jak i poza nimi"
         />
         <SmallBlock
           image={{
             src: "/images/brain.jpg",
             alt: "",
           }}
-          title="Lorem ipsum dolor sit amet"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          title="Korzystam z różnorodnych materiałów"
+          description="Autorskich, stworzonych przez innych nauczycieli, a nawet uczniów"
         />
       </Container>
     </>

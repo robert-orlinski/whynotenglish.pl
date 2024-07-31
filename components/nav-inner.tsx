@@ -42,22 +42,24 @@ const NavInner = ({ variant, className }: NavInnerProps) => {
       className={cn(navInnerVariants({ variant, className }))}
     >
       <NavigationMenuItem>
-        <NavigationMenuLink href="/link-1">Link 1</NavigationMenuLink>
+        <NavigationMenuLink href="/zajecia">
+          Jak wyglądają zajęcia?
+        </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink href="/link-2">Link 2</NavigationMenuLink>
+        <NavigationMenuLink href="/cennik">Cennik</NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink href="/link-3">Link 3</NavigationMenuLink>
+        <NavigationMenuLink href="/o-mnie-i-o-szkole">
+          O mnie i o szkole
+        </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink href="/link-4">Link 4</NavigationMenuLink>
+        <NavigationMenuLink href="/kontakt">Kontakt</NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <Button asChild className={buttonVariants({ variant })} size="lg">
-          <NavigationMenuLink href="/featured-link">
-            Featured link
-          </NavigationMenuLink>
+          <NavigationMenuLink href="/zapisz-sie">Zapisz się</NavigationMenuLink>
         </Button>
       </NavigationMenuItem>
     </NavigationMenuList>
