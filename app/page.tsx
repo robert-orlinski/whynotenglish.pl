@@ -47,6 +47,7 @@ export default function Home() {
             alt="Woman in a forest"
             fill
             className="rounded-2xl object-cover object-center"
+            priority
           />
         </figure>
       </Container>
