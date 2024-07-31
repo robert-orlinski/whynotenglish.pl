@@ -7,6 +7,7 @@ const containerVariants = cva("container", {
     variant: {
       default: null,
       narrow: "max-w-screen-xl",
+      "v-narrow": "max-w-screen-md",
     },
   },
   defaultVariants: {

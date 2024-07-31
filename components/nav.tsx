@@ -1,4 +1,4 @@
-import { NavigationMenu } from "@/components/ui/navigation-menu";
+import { NavigationMenu } from "@/components/shadcn/navigation-menu";
 import { Brand } from "./brand";
 import { MobileMenu } from "./mobile-menu";
 import { NavInner } from "./nav-inner";

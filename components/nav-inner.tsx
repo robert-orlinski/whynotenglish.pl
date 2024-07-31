@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn/button";
 import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from "@/components/shadcn/navigation-menu";
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 

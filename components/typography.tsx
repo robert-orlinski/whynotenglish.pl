@@ -6,7 +6,7 @@ const H1 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-3xl font-bold tracking-tight md:text-4xl lg:text-6xl",
+        "scroll-m-20 text-3xl font-bold tracking-tight text-primary md:text-4xl lg:text-6xl",
         className,
       )}
       {...props}
@@ -18,7 +18,7 @@ const H2 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <h2
       className={cn(
-        "scroll-m-20 text-2xl font-bold tracking-tight md:text-3xl lg:text-5xl",
+        "scroll-m-20 text-2xl font-bold tracking-tight text-primary md:text-3xl lg:text-5xl",
         className,
       )}
       {...props}
@@ -26,12 +26,23 @@ const H2 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => {
   );
 };
 
-const paragraphVariants = cva("text-gray-700", {
+const H3 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => {
+  return (
+    <h3
+      className={cn(
+        "scroll-m-20 text-2xl font-bold tracking-tight text-primary md:text-3xl lg:text-4xl",
+        className,
+      )}
+      {...props}
+    />
+  );
+};
+
+const paragraphVariants = cva("text-primary/70", {
   variants: {
     size: {
-      xl: "text-xl lg:text-2xl",
-      lg: "text-lg lg:text-xl",
-      default: "",
+      lg: "text-xl lg:text-2xl",
+      default: "text-lg lg:text-xl",
     },
   },
   defaultVariants: {
@@ -49,4 +60,4 @@ const P = ({ size, className, ...props }: ParagraphProps) => {
   );
 };
 
-export { H1, H2, P };
+export { H1, H2, H3, P };
