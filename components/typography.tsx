@@ -43,6 +43,7 @@ const textVariants = cva("text-primary/75", {
     size: {
       lg: "text-xl lg:text-2xl",
       default: "text-lg lg:text-xl",
+      sm: "",
     },
   },
   defaultVariants: {
