@@ -158,6 +158,20 @@ export default function Home() {
           ]}
         />
       </Container>
+      <Container
+        variant="v-narrow"
+        className="my-28 flex flex-col gap-8 md:items-center md:text-center"
+      >
+        <H2>Zapisz się już dzisiaj</H2>
+        <div className="flex gap-6">
+          <Button asChild>
+            <Link href="/cennik">Cennik</Link>
+          </Button>
+          <Button variant="secondary" asChild>
+            <Link href="/zapisz-sie">Zapisz się!</Link>
+          </Button>
+        </div>
+      </Container>
     </>
   );
 }
